@@ -1,0 +1,34 @@
+package lab02;
+
+public class MenuPrincipal {
+
+	public static void main(String[] args) {
+		LojaoP2 loja = new LojaoP2();
+		int opcao;
+		
+		
+		do {
+
+			loja.imprimeMenu();
+			opcao = loja.recebeInteiro();
+			
+			switch (opcao) {
+			case 1:
+				loja.cadastro();
+				loja.imprime();
+				break;
+			case 2:
+				loja.alteraPreco();
+				break;
+			default:
+				break;
+			}
+
+		} while (opcao != 3);
+		
+		 System.out.println("-- Fim da execução --");
+
+	}
+
+
+}
